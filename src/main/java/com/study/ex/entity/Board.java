@@ -40,4 +40,12 @@ public class Board {
         this.hits = hits;
         this.deleteYn = deleteYn;
     }
+
+    // 비즈니스 로직
+    public void update(String title, String content, String writer){
+        this.title = title;
+        this.content = content;
+        this.writer = writer;
+        this.modifiedDate = LocalDateTime.now();
+    }
 }

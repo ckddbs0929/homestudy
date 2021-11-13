@@ -21,7 +21,7 @@ public class BoardTests {
 
         // 게시글 파라미터 생성
         Board params = Board.builder().
-                title("1번").
+                title("2번").
                 content("내용").writer("창윤").hits(0).deleteYn('N').build();
 
         // 게시글 저장
@@ -54,7 +54,7 @@ public class BoardTests {
         // findById로 1번 게시글을 entity라는 파라미터에 값을 전달한 후
         Board entity = boardRepository.findById((long) 1).get();
 
-        // entity안에 들어있는 파라미터를 삭제제
+        // entity안에 들어있는 파라미터를 삭제
         boardRepository.delete(entity);
     }
 }
